@@ -1,0 +1,419 @@
+{
+	"info": {
+		"_postman_id": "acd5d55d-53c7-4824-ae69-7d4d88c737fb",
+		"name": "ProjectApiTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32064124"
+	},
+	"item": [
+		{
+			"name": "CreateUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fullName\":\"Pranita Dilip Kale\",\r\n    \"userEmail\":\"pranavkale@gmail.com\",\r\n    \"userPassword\":\"P@66word\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/auth/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usersignin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"userEmail\":\"pranavkale44@gmail.com\",\r\n    \"userPassword\":\"P@55word\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/auth/signin",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJwcmFuYXZrYWxlNDRAZ21haWwuY29tIiwiaWF0IjoxNzY0MDY1ODc5LCJleHAiOjE3NjQwNjk0Nzl9.HiVGarTgXP6vamGDm0YPEOXHTk1zESensXKbsreac7b8_xEGykfW9RFaSqmEa-cN",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/auth/profile",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"auth",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllusers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJwcmFuYXZrYWxlNDRAZ21haWwuY29tIiwiaWF0IjoxNzY0MDY1ODc5LCJleHAiOjE3NjQwNjk0Nzl9.HiVGarTgXP6vamGDm0YPEOXHTk1zESensXKbsreac7b8_xEGykfW9RFaSqmEa-cN",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/auth/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"auth",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create-Project",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJwcmFuYXZrYWxlNDRAZ21haWwuY29tIiwiaWF0IjoxNzY0MDY2NDE3LCJleHAiOjE3NjQwNzAwMTd9.K-z0iQZOhil4S1kuyaFMxtFdGPz73ojq72QMOPct83eB3-wPs1G_7w0STSU8Kpo2",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"projectName\":\"Documenting the api\",\r\n    \"projectDescription\":\"Documenting my API\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/projects",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"projects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllProjects",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJwcmFuYXZrYWxlNDRAZ21haWwuY29tIiwiaWF0IjoxNzY0MDY2NDE3LCJleHAiOjE3NjQwNzAwMTd9.K-z0iQZOhil4S1kuyaFMxtFdGPz73ojq72QMOPct83eB3-wPs1G_7w0STSU8Kpo2",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/projects/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"projects",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateProject",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJwcmFuYXZrYWxlNDRAZ21haWwuY29tIiwiaWF0IjoxNzY0MDY2NDE3LCJleHAiOjE3NjQwNzAwMTd9.K-z0iQZOhil4S1kuyaFMxtFdGPz73ojq72QMOPct83eB3-wPs1G_7w0STSU8Kpo2",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"projectName\":\"Documenting the api version 1\",\r\n    \"projectDescription\":\"Documenting my API version 1\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/projects/update/25eeaa2a-d294-4a04-bafc-a7b039d96660",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"projects",
+						"update",
+						"25eeaa2a-d294-4a04-bafc-a7b039d96660"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteProject",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJwcmFuYXZrYWxlNDRAZ21haWwuY29tIiwiaWF0IjoxNzY0MDY2NDE3LCJleHAiOjE3NjQwNzAwMTd9.K-z0iQZOhil4S1kuyaFMxtFdGPz73ojq72QMOPct83eB3-wPs1G_7w0STSU8Kpo2",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/projects/delete/25eeaa2a-d294-4a04-bafc-a7b039d96660",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"projects",
+						"delete",
+						"25eeaa2a-d294-4a04-bafc-a7b039d96660"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add-Task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJwcmFuYXZrYWxlNDRAZ21haWwuY29tIiwiaWF0IjoxNzY0MDY3MzQ2LCJleHAiOjE3NjQwNzA5NDZ9.EcPbGTCuH_66w1fhaiZCqCDLlRTwPttiH8yv7wHW0aUU8SA_9IGdN7FOCkH_qhjd",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {  \r\n    \"taskTitle\":\"Test all api\",\r\n    \"taskDescription\":\"sucussfully test api functionality\",\r\n    \"taskStatus\":\"PENDING\",\r\n    \"taskPriority\":\"HIGH\",\r\n    \"taskDueDate\":\"2025-11-27\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/tasks/project/4077690f-50b7-407b-9720-e75054d3f747",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"tasks",
+						"project",
+						"4077690f-50b7-407b-9720-e75054d3f747"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-Tasks",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJwcmFuYXZrYWxlNDRAZ21haWwuY29tIiwiaWF0IjoxNzY0MDY2NDE3LCJleHAiOjE3NjQwNzAwMTd9.K-z0iQZOhil4S1kuyaFMxtFdGPz73ojq72QMOPct83eB3-wPs1G_7w0STSU8Kpo2",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/tasks",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update-Task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJwcmFuYXZrYWxlNDRAZ21haWwuY29tIiwiaWF0IjoxNzY0MDY3MzQ2LCJleHAiOjE3NjQwNzA5NDZ9.EcPbGTCuH_66w1fhaiZCqCDLlRTwPttiH8yv7wHW0aUU8SA_9IGdN7FOCkH_qhjd",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n    \"taskTitle\":\"Test all api version 1\",\r\n    \"taskDescription\":\"sucussfully test api functionality version 1\",\r\n    \"taskStatus\":\"IN_PROGRESS\",\r\n    \"taskPriority\":\"HIGH\",\r\n    \"taskDueDate\":\"2025-11-23\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/tasks/c3a8b171-1f5e-4f90-b543-ce332fd7c2a8",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"tasks",
+						"c3a8b171-1f5e-4f90-b543-ce332fd7c2a8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search-Title",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJwcmFuYXZrYWxlNDRAZ21haWwuY29tIiwiaWF0IjoxNzY0MDY2NDE3LCJleHAiOjE3NjQwNzAwMTd9.K-z0iQZOhil4S1kuyaFMxtFdGPz73ojq72QMOPct83eB3-wPs1G_7w0STSU8Kpo2",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/tasks/filter?keyword=signup",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"tasks",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "signup"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
